@@ -343,7 +343,7 @@ function tick(){
   box.innerHTML=parts.map(function(x){return '<div><b>'+x[1]+'</b><small>'+x[0]+'</small></div>'}).join('');
 }
 tick();setInterval(tick,1000);
-var LOCK=false; // set to true to lock the button until midnight Nov 28 (Vancouver time)
+var LOCK=true; // set to true to lock the button until midnight Nov 28 (Vancouver time)
 function unlock(){
   var b=document.getElementById('openBtn');
   if(b.classList.contains('locked')){b.classList.remove('locked');b.classList.add('unlocked');b.setAttribute('aria-disabled','false');b.textContent='Read the messages ↓'}
